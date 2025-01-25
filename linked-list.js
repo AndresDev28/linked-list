@@ -116,17 +116,16 @@ export class LinkedList {
     return null;
   }
 
-  toString() {
+  toString() { /** Devuelve una representación en cadena de la lista */
     let str = "";
-    if (this.head === null) {
-      return "null";
-    }
     let currentNode = this.head;
+
     while (currentNode !== null) {
-      str+= "( " + currentNode.value + " ) -> ";
+      str += "( " + currentNode.value + " ) -> ";
       currentNode = currentNode.nextNode;
     }
-    str+= "null";
+
+    str += "null";
     return str;
   }
 
@@ -193,23 +192,4 @@ export class LinkedList {
 
     return value;
   }
-
-  toString() { /** Devuelve una representación en cadena de la lista */
-    let str = "";
-    let currentNode = this.head;
-
-    while (currentNode !== null) {
-      str += "( " + currentNode.value + " ) -> ";
-      currentNode = currentNode.nextNode;
-    }
-
-    str += "null";
-    return str;
-  }
 } 
-
-
-// 3a. Recorrer la lista hasta el nodo anterior al índice
-    // 3b. Guardar la referencia al nodo a eliminar
-    // 3c. Enlazar el nextNode del nodo anterior al nextNode del nodo a eliminar
-    // 3d. Actualizar la cola si eliminamos el último nodo
